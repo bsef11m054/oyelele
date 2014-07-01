@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    }
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src=""></script>
+    <script>
+        $(document).ready(function () {
+            $("#yu").keypress(function () {
+                var value = $(this).val();
+                $.getJSON('/User/search?cat=' + value, function (data) {
+                   $('#myTable').empty();
+                    var twit_lk = '../User/SignUp';
+                    var g='';
+                    $.each(data, function (index, item) {
+                          g=g+
+                       '<tr><td><a href="' + twit_lk + '">'+item.Email+'</a></td></tr>'
+                       // alert(item.Email + "ghgh");
+                    });
+                   $(g).appendTo($("#myTable"));
+                                       
+                });
+            });
+            //$("#yu").keypress(function () {
+            //    var value = $(this).val();
+            //    $('#myTable').empty();
+            //    var twit_lk = '../User/SignUp';
+            //    //var newLink = $("<a />", {
+            //    //    id : "id5",
+            //    //    name : "link",
+            //    //    href : "yupppiee.html?a="+value,
+            //    //    text : "some text"
+            //    //});
+            //    //$('#myTable').append('<tr><td><a href="">test 2</td></tr>')
+            //    var g =
+            //'<tr><td>Name: <input type="text" id="txtName"></td><tr>' +
+            //'<tr><td><input type="button" class="BtnPlus" value="+" /></td></tr>' +
+            //'<tr><td><a href="' + twit_lk + '">abc</a></td></tr>' +
+            
+            //    $(g).appendTo($("#myTable"))
+
+
+
+//});
+            $("#ty").focusout(function () {
+
+                $('#myTable').empty();
+
+
+            });
+
+            $("#butn").click(function () {
+
+                var value = $("#yu").val();
+                window.location.href = '/User/se?cat=' + value;
+            });
+
+            $("#hnja").click(function () {
+
+                
+                window.location.href = '/User/ViewCart';
+            });
+
+      });
+
+
+       
+        /* activate sidebar */
+       
+       
+
+    </script>
+    <style>
+       
+
+        
+
+        #circle {
+            width: 35px;
+            height: 35px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            border: 1px solid #900;
+            line-height: 40px;
+            text-align: center;
+            background-image: url(/Images/images.jpg);
+            background-repeat: no-repeat;
+            color: #333;
+        }
+
+        #category-list {
+            border-right: 1px solid #CCC;
+            color: #FFF;
+        }
+
+        #droplist {
+
+        
+            width: 450px;
+        }
+
+        #list_cat {
+            height: 8px;
+            padding: 0px;
+            margin: 0px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="ty">
+            <div class="col-md-2"><a href="~/Home/Index">
+                <img src="~/Images/oyelele-logo-FINAL.jpg" style="width:100%;" /></a>
+
+            </div>
+            <div class="col-md-6">
+                <div class="input-group input-group-lg" style="margin:7px; margin-bottom:0px;">
+                    <input type="text" class="form-control" placeholder="Username" onkeypress="" id="yu">
+                    <span class="btn btn-default input-group-addon" id="butn">Search</span>
+                </div>
+                <table id="myTable" style=" position:absolute; z-index:3; width:50%; margin-left:7px; background-color:aquamarine; border-radius:7px">
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2">
+
+                <img src="~/Images/animated-banners-header.gif" style="width:100%;" />
+
+
+
+            </div>
+            <div class="col-md-2">
+
+                <div class="input-group input-group-sm" style="padding-left:10%; padding-right:10%; " id="hnja">
+
+                    <span class="btn btn-default input-group-addon glyphicon glyphicon-shopping-cart" style="text-align:left;
+                border:3px solid #333;border-radius: 5%; color:#FFF; background-color:#900;">
+                        <b>View Cart</b><br />
+                        <span style="padding-left:5%">Rs 1024</span><span style="position:absolute; top:2px; right:5px;"><div id="circle"><h4><b>4</b></h4></div>			 					</span>
+                    </span>
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="row" style="height:20px;">
+            <div class="col-md-12" style="height:50px;">
+                <nav class="navbar navbar-default" role="navigation" style="background-color:#666;height:20px;">
+
+                    <div id="menu">
+                        <ul class="nav navbar-nav">
+
+                            
+                            <li id="category-list"><a href=""><b>Women</b></a></li>
+                            <li id="category-list"><a href=""><b>Kids</b></a></li>
+                            <li id="category-list"><a href=""><b>Sale</b></a></li>
+                        </ul>
+                        @Html.Partial("Partial4")
+                        
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row" style="margin-top:0px">
+            <div class="col-md-12">
+                <a href=""><img src="~/Images/5.jpg" style="width:100%;" /></a>
+            </div>
+        </div>
+    @RenderBody()
+
+
+
+</body>
+</html>

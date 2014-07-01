@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "se";
+}
+
+<script>
+    $(document).ready(function () {
+        $(".a").mouseover(function () {
+            $(this).children('.b').css({ "display": "block" });
+            $(this).parent('.v').css({ "border": "1px solid black" });
+
+        });
+        $(".a").mouseout(function () {
+            $(this).children('.b').css({ "display": "none" });
+
+        });
+        $(".l").mouseover(function () {
+            $(this).children('.btn').css({ "background-color": "pink" });
+
+
+        });
+    });
+
+</script>
+<div class="row" style="padding-right:1.3%">
+    <div class="col-md-2" style="padding-right:7px; margin-top:0px">
+        @Html.Partial("Wq")
+
+    </div>
+    <div class="col-md-10" style="background-color:#FF3">
+        <div style="width:100%;margin-top:10px; padding-bottom:15px">
+            <div class="row">
+                <div class="col-md-8"><h3 style="color:#F00">Women's Clothing: (234 Items)</h3></div>
+            </div>
+
+
+        </div>
+        <div style="width:100%;">
+            <div class="row">
+                <div class="col-md-3" style="text-align:center;padding-bottom:15px">
+                    <select name="cars" style="width:80%; height:25px; border-radius:5px;" onchange="">
+                        <option value="Brands" selected="selected">Brands</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                </div>
+                <div class="col-md-3" style="text-align:center;padding-bottom:15px">
+                    <select name="cars" style="width:80%; height:25px; border-radius:5px;" onchange="">
+                        <option value="Colors" selected="selected">Colors</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                </div>
+                <div class="col-md-3" style="text-align:center;padding-bottom:15px">
+                    <select name="cars" style="width:80%; height:25px; border-radius:5px; " onchange="">
+                        <option value="volvo" selected="selected">Size</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                </div>
+                <div class="col-md-3" style="text-align:center;padding-bottom:15px">
+                    <select name="cars" style="width:80%; height:25px; border-radius:5px;" onchange="">
+                        <option value="volvo" selected="selected">Price</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            @foreach (var i in ViewBag.Catagory)
+            {
+
+                <div class="col-md-3" style="text-align:center;" id="v">
+                    <div class="a" style="width: 70%; height: 200px; margin-top: 20px; margin-bottom: 10px; background-size: 100% 100%; background-image: url(/Images/@i.Image); background-repeat: no-repeat; margin-left: auto; margin-right: auto;">
+                        <div class="row b" style="display:none; padding-left:0%; padding-top:99%;">
+                            <div class="col-md-12">
+                                <a href="" class="l">
+                                    <button type="button" class="btn btn-info" id="o"
+                                            style="background-color:#000;height:25px;padding-top:0px">
+                                        View
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ul style="list-style-type:none; padding-left:6px">
+                            <li>@i.Pname</li>
+                            <li>@i.Price</li>
+                        </ul>
+                    </div>
+                </div>
+
+                // <li>@i.Pname</li>
+                //<li><img src="~/Images/@i.Image" /></li>
+            }
+        </div>
+    </div>
+</div>

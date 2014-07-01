@@ -1,0 +1,290 @@
+﻿@{
+    ViewBag.Title = "Womens";
+}
+
+<style>
+    .carousel {
+        height: 400px;
+        margin-bottom: 0px;
+    }
+
+    .carousel-caption {
+        z-index: 10;
+    }
+
+    .carousel .item {
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 400px;
+    }
+
+    #category-list {
+        border-right: 1px solid #CCC;
+        color: #FFF;
+    }
+
+    #droplist {
+        width: 450px;
+    }
+
+    #list_cat {
+        height: 8px;
+        padding: 0px;
+        margin: 0px;
+        padding-left: 10px;
+    }
+</style>
+
+
+
+
+<body>
+
+
+    <div class="row">
+        <div class="col-md-2" style="padding-right:7px;">
+            <div id="MainMenu">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td height="18" style="padding:2px; margin:0px; padding-left:10px;"><a href="" style="color:#900;font-size:14px"><b>Special Offers</b></a></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td height="18" style="padding:2px; margin:0px; padding-left:10px;"><a href="" style="color:#900;font-size:14px"><b>New Arrivals</b></a></td>
+                        </tr>
+                        <tr>
+                            <td height="18" style="padding:2px; margin:0px; padding-left:10px;background-color:#CCC">@Html.ActionLink("Clothing", "Index", "MensClothing")</td>
+                        </tr>
+                        <tr>
+                            <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                                @Html.ActionLink("Shalwar Kameez", "ShalwarKameez", "MensClothing", new { so = "MShalwar Kameez" }, null)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="8" style="padding:0px; margin:0px; padding-left:10px">@Html.ActionLink("Unstiched Fabric", "ShalwarKameez", "MensClothing", new { so = "MUnstiched Faric" }, null)</td>
+                        </tr>
+                        <tr>
+                            <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                                @Html.ActionLink("Scarfs", "ShalwarKameez", "WomensClothing", new { so = "Scarfs" }, null)
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                            @Html.ActionLink("Abayas & Hijabs", "ShalwarKameez", "WomensClothing", new { so = "Abayas" }, null)
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td height="18" style="padding:2px; margin:0px; padding-left:10px;background-color:#CCC">
+                        @Html.ActionLink("MensShoes", "Index", "MensShoes", new { so = "Shoes" }, null)
+                    </td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        @Html.ActionLink("Sandals", "Sandals", "WomensShoes", new { so = "Sandals" }, null)
+                    </td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        @Html.ActionLink("Heels", "Sandals", "WomensShoes", new { so = "Heels" }, null)
+                    </td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        @Html.ActionLink("Boots", "Sandals", "WomensShoes", new { so = "Boots" }, null)
+                    </td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        @Html.ActionLink("Sports Shoes", "Sandals", "WomensShoes", new { so = "Sports Shoes" }, null)
+                    </td>
+                </tr>
+                <tr>
+                    <td height="18" style="padding:2px; margin:0px; padding-left:10px;background-color:#CCC"><a href="" style="color:maroon"><b>Bags</b></a></td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        <a href="">Wallets</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        <a href=""> Bags & clutches</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th height="18" style="padding:2px; margin:0px; padding-left:10px;background-color:#CCC">
+                        <a href="" style="color:maroon">
+                            <b>Accessories</b>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px"><a href="">Fragrance</a></td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px"><a href="">Watches</a></td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        <a href="">Hair Accessories</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="18" style="padding:2px; margin:0px; padding-left:10px;background-color:#CCC"><a href="" style="color:maroon"><b>Jewellery</b></a></td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        <a href="">Earrings</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        <a href="">Rings</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="8" style="padding:0px; margin:0px; padding-left:10px">
+                        <a href="">Necklaces</a>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="col-md-7" style="background-color:#0F0; padding-left:0px; padding-right:0px; height:513px;">
+    <div id="slider" class="carousel slide" data-ride="carousel">
+
+        <!-- controls -->
+
+        <ol class="carousel-indicators">
+
+            <li data-target="#slider" data-slide-to="0" class="active"></li>
+
+            <li data-target="#slider" data-slide-to="1"></li>
+            <li data-target="#slider" data-slide-to="2"></li>
+
+
+        </ol>
+
+        <div class="carousel-inner">
+
+            <!-- slides -->
+
+
+            <div class="item" style=" height:513px; background-image: url('/Images/menseastern.jpg'); background-size: 100% 100%; background-repeat: no-repeat;">
+
+                <div class="container">
+
+                    <div class="carousel-caption">
+
+
+
+                        <p><a class="btn btn-lg btn-default" href="#" role="button">Button 3</a></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="item" style=" height:513px; background-image: url('/Images/voseen.jpg'); background-size: 100% 100%; background-repeat: no-repeat;">
+
+                <div class="container">
+
+                    <div class="carousel-caption">
+
+
+
+                        <p><a class="btn btn-lg btn-default" href="#" role="button">Button 1</a></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="item active" style="height: 513px; background-image: url('/Images/riverrock2.jpg'); background-size: 100% 100%; background-repeat: no-repeat;">
+
+                <div class="container">
+
+                    <div class="carousel-caption">
+
+
+
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Button 2</a></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- left-right controls -->
+
+        <a class="left carousel-control" href="#slider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+
+        <a class="right carousel-control" href="#slider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        
+        <a class="right carousel-control" href="#slider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
+
+    </div><!-- /.carousel -->
+
+
+</div>
+<div class="col-md-3">
+    <a href=""><img src="~/Images/timex(1).jpg" style="width: 100%;height:261px;" /></a>
+    <a href=""><img src="~/Images/brands.jpg" style="width:100%; margin-top:5px; height:255px" /></a>
+
+</div>
+</div>
+<div class="row" style="margin-top:0px;">
+    <div class="col-md-6" style="padding-left:15px; padding-right:5px;">
+        <a href=""><img src="~/Images/leathercrafts2.jpg" style="width:100%; margin-left:0px; height:370px" /></a>
+    </div>
+    <div class="col-md-3" style="padding-left:0px; padding-right:5px;">
+        <a href=""><img src="~/Images/womenshoes.jpg" style="width:100%; height:180px" /></a>
+        <a href=""> <img src="~/Images/imperious.jpg" style="width:100%; margin-top:5px; height:180px" /></a>
+    </div>
+    <div class="col-md-3" style=" padding-left:0px;">
+        <a href=""><img src="~/Images/titan3.jpg" style="width:100%;height:365px" /></a>
+    </div>
+</div>
+<div class="row" style="padding-left:12px; padding-right:12px;">
+    <div class="col-md-12" style="height:30px; background-color:#CCC;border:1px solid #999; border-radius:3px;">
+        <div style="margin-top:8px; margin-bottom:12px;"><b>Top Brands</b></div>
+    </div>
+</div>
+<div class="row" style="padding-left:12px; padding-right:12px;">
+    <div class="col-md-12" style="height:150px; background-color:white;border:1px solid #999; border-radius:3px;">
+        <div style="margin-top:15px; margin-bottom:8px;">
+            <marquee>
+                <a href=""><img src="~/Images/images (2).jpg" style="width: 100px; margin-right: 15px; height: 115px" /></a>
+                <a href=""><img src="~/Images/download.jpg" style="width: 100px; height: 105px; margin-right: 15px;" /></a>
+                <a href=""><img src="~/Images/download (1).jpg" style="width: 100px; height: 105px; margin-right: 15px;" /></a>
+                <a href=""><img src="~/Images/download (2).jpg" style="width: 100px; height: 105px; margin-right: 15px;" /></a>
+                <a href=""><img src="~/Images/images (3).jpg" style="width: 100px; height: 105px; margin-right: 15px;" /></a>
+                <a href=""><img src="~/Images/images (6).jpg" style="width: 100px; height: 105px; margin-right: 15px;" /></a>
+
+                `
+            </marquee>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
+
+

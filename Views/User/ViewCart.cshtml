@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "ViewCart";
+}
+
+<div class="row">
+    @foreach (var i in ViewBag.Catagory)
+    {
+
+        <div class="col-md-3" style="text-align:center;" id="v">
+            @*<div class="a" style="width: 70%; height: 200px; margin-top: 20px; margin-bottom: 10px; background-size: 100% 100%; background-image: url(/Images/@i.Image); background-repeat: no-repeat; margin-left: auto; margin-right: auto;">
+                <div class="row b" style="display:none; padding-left:0%; padding-top:99%;">
+                    <div class="col-md-12">
+                        <a href="" class="l">
+                            <button type="button" class="btn btn-info" id="o"
+                                    style="background-color:#000;height:25px;padding-top:0px">
+                                View
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>*@
+            <div>
+                <ul style="list-style-type:none; padding-left:6px">
+                    <li>@i.Pname</li>
+                    <li>@i.Price</li>
+                    <li>@i.Quantity</li>
+                </ul>
+            </div>
+        </div>
+
+        // <li>@i.Pname</li>
+        //<li><img src="~/Images/@i.Image" /></li>
+    }

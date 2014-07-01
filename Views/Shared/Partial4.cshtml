@@ -1,0 +1,39 @@
+﻿ @model project.Models.User
+<ul class="nav pull-right navbar-nav">
+    @if (Session["login"] == null)
+{
+   
+    <li class="divider-vertical"></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+
+        <div class="dropdown-menu" style="padding: 10px;min-width:240px;">
+
+            
+            <form action="/User/Login" method="post" role="form" class="form-horizontal">
+
+                <input class="form-control" id="inputEmail1" placeholder="Email" style="margin-bottom:.5em" type="text" name="Email">
+
+                <input class="form-control" id="inputPassword1" placeholder="Password" style="margin-bottom:.5em" type="password" name="Password">
+
+                
+                <input class="btn btn-primary" style="margin-top:.75em;width: 100%; height: 32px; font-size: 13px;" name="commit" value="Sign In" type="submit">
+            </form>
+
+
+        </div>
+    </li>
+    <li>
+        <a href="/User/SignUp">Sign Up</a>
+    </li>
+       
+
+}
+else
+{
+    <li>
+        <a href="">@Session["login"]</a>
+    </li>
+}
+</ul>
+

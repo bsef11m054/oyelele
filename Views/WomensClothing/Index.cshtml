@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".a").mouseover(function () {
+            $(this).children('.b').css({ "display": "block" });
+
+        });
+        $(".a").mouseout(function () {
+            $(this).children('.b').css({ "display": "none" });
+
+        });
+    });
+
+</script>
+<div class="row">
+    <div class="col-md-2" style="padding-right:7px; margin-top:10px">
+        @Html.Partial("WC")
+       
+    </div>
+    <div class="col-md-9" style="background-color:#FF3">
+        <div style="width:100%;border:3px solid #F33;margin-top:10px; padding-bottom:15px">
+            <div class="row">
+                <div class="col-md-3" style="text-align:center">
+                    <img src="~/Images/river-rock-5725-25793-1-catalog.jpg" height="200"
+                         style="margin-top:20px; margin-bottom:10px" /><br />
+                    <a href="" style="text-decoration:none">
+                        <button type="button" class="btn btn-info" style="background-color:#000;height:25px;padding-top:0px">
+                            <img src="/Images/right-arrow-icone-7518-48.png" width="20" height="20" />Simple
+                        </button>
+                    </a>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <img src="~/Images/river-rock-5725-25793-1-catalog.jpg" height="200"
+                         style="margin-top:20px; margin-bottom:10px" /><br />
+                    <a href="" style="text-decoration:none">
+                        <button type="button" class="btn btn-info" style="background-color:#000;height:25px;padding-top:0px">
+                            <img src="/Images/right-arrow-icone-7518-48.png" width="20" height="20" />Simple
+                        </button>
+                    </a>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <img src="~/Images/river-rock-5725-25793-1-catalog.jpg" height="200"
+                         style="margin-top:20px; margin-bottom:10px" /><br />
+                    <a href="" style="text-decoration:none">
+                        <button type="button" class="btn btn-info" style="background-color:#000;height:25px;padding-top:0px">
+                            <img src="/Images/right-arrow-icone-7518-48.png" width="20" height="20" />Simple
+                        </button>
+                    </a>
+                </div>                <div class="col-md-3" style="text-align:center">
+                    <img src="~/Images/river-rock-5725-25793-1-catalog.jpg" height="200"
+                         style="margin-top:20px; margin-bottom:10px" /><br />
+                    <a href="" style="text-decoration:none">
+                        <button type="button" class="btn btn-info" style="background-color:#000;height:25px;padding-top:0px">
+                            <img src="/Images/right-arrow-icone-7518-48.png" width="20" height="20" />Simple
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="text-align:center">
+                    <img src="~/Images/river-rock-5725-25793-1-catalog.jpg" height="200"
+                         style="margin-top:20px; margin-bottom:10px" /><br />
+                    <a href="" style="text-decoration:none">
+                        <button type="button" class="btn btn-info" style="background-color:#000;height:25px;padding-top:0px">
+                            <img src="/Images/right-arrow-icone-7518-48.png" width="20" height="20" />Simple
+                        </button>
+                    </a>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <img src="~/Images/river-rock-5725-25793-1-catalog.jpg" height="200"
+                         style="margin-top:20px; margin-bottom:10px" /><br />
+                    <a href="" style="text-decoration:none">
+                        <button type="button" class="btn btn-info" style="background-color:#000;height:25px;padding-top:0px">
+                            <img src="/Images/right-arrow-icone-7518-48.png" width="20" height="20" />Simple
+                        </button>
+                    </a>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <img src="~/Images/river-rock-5725-25793-1-catalog.jpg" height="200"
+                         style="margin-top:20px; margin-bottom:10px" /><br />
+                    <a href="" style="text-decoration:none">
+                        <button type="button" class="btn btn-info" style="background-color:#000;height:25px;padding-top:0px">
+                            <img src="/Images/right-arrow-icone-7518-48.png" width="20" height="20" />Simple
+                        </button>
+                    </a>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <img src="~/Images/river-rock-5725-25793-1-catalog.jpg" height="200"
+                         style="margin-top:20px; margin-bottom:10px" /><br />
+                    <a href="" style="text-decoration:none">
+                        <button type="button" class="btn btn-info" style="background-color:#000;height:25px;padding-top:0px">
+                            <img src="/Images/right-arrow-icone-7518-48.png" width="20" height="20" />Simple
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="width:100%;margin-top:10px; padding-bottom:15px">
+            <div class="row">
+                <div class="col-md-8"><h3 style="color:#F00">Women's Clothing: (234 Items)</h3></div>
+            </div>
+
+
+        </div>
+        <div style="width:100%;">
+            <div class="row">
+                <div class="col-md-3" style="text-align:center;padding-bottom:15px">
+                    <select name="cars" style="width:80%; height:25px; border-radius:5px;" onchange="">
+                        <option value="Brands" selected="selected">Brands</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                </div>
+                <div class="col-md-3" style="text-align:center;padding-bottom:15px">
+                    <select name="cars" style="width:80%; height:25px; border-radius:5px;" onchange="">
+                        <option value="Colors" selected="selected">Colors</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                </div>
+                <div class="col-md-3" style="text-align:center;padding-bottom:15px">
+                    <select name="cars" style="width:80%; height:25px; border-radius:5px; " onchange="">
+                        <option value="volvo" selected="selected">Size</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                </div>
+                <div class="col-md-3" style="text-align:center;padding-bottom:15px">
+                    <select name="cars" style="width:80%; height:25px; border-radius:5px;" onchange="">
+                        <option value="volvo" selected="selected">Price</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div style="width:100%;margin-top:10px; padding-bottom:15px">
+            <div class="row">
+                <div class="col-md-3" style="text-align:center">
+                    <div class="a" style="width: 70%; height: 200px; margin-top: 20px; margin-bottom: 10px; background-size: 100% 100%; background-image:
+                              url(/Images/giordano-9353-46114-1-catalog.jpg); background-repeat: no-repeat;; margin-left: auto; margin-right: auto;">
+                        <div class="row b" style="display:none; padding-left:0%; padding-top:99%;">
+                            <div class="col-md-12">
+                                <a href="">
+                                    <button type="button" class="btn btn-info"
+                                            style="background-color:#000;height:25px;padding-top:0px">
+                                        View
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <div class="a" style="width: 70%; height: 200px; margin-top: 20px; margin-bottom: 10px; background-size: 100% 100%; background-image: url(/Images/giordano-9353-46114-1-catalog.jpg); background-repeat: no-repeat; margin-left: auto; margin-right: auto;">
+                        <div class="row b" style="display:none; padding-left:0%; padding-top:99%;">
+                            <div class="col-md-12">
+                                <a href="">
+                                    <button type="button" class="btn btn-info"
+                                            style="background-color:#000;height:25px;padding-top:0px">
+                                        View
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <div class="a" style="width: 70%; height: 200px; margin-top: 20px; margin-bottom: 10px; background-size: 100% 100%; background-image:
+                              url(/Images/giordano-9353-46114-1-catalog.jpg); background-repeat: no-repeat;; margin-left: auto; margin-right: auto;">
+                        <div class="row b" style="display:none; padding-left:0%; padding-top:99%;">
+                            <div class="col-md-12">
+                                <a href="">
+                                    <button type="button" class="btn btn-info"
+                                            style="background-color:#000;height:25px;padding-top:0px">
+                                        View
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <div class="a" style="width: 70%; height: 200px; margin-top: 20px; margin-bottom: 10px; background-size: 100% 100%; background-image: url(/Images/giordano-9353-46114-1-catalog.jpg); background-repeat: no-repeat; margin-left: auto; margin-right: auto;">
+                        <div class="row b" style="display:none; padding-left:0%; padding-top:99%;">
+                            <div class="col-md-12">
+                                <a href="">
+                                    <button type="button" class="btn btn-info"
+                                            style="background-color:#000;height:25px;padding-top:0px">
+                                        View
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+
+        </div>
+    </div>
+
+
+
